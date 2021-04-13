@@ -11,11 +11,11 @@ In the table it is possible to delete the users by clicking on the X.
 
 **Clone**:
 To clone the project please go to:
-https://github.com/luisfop/LuVino
+https://github.com/luisfop/BlackWall.git
 
 On the terminal execute: 
 
-    git clone: https://github.com/luisfop/LuVino
+    git clone: https://github.com/luisfop/BlackWall.git
 
 Open the Stefanini folder:
 
