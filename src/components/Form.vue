@@ -5,17 +5,12 @@
       <div class="sub-group">
         <div class="ddd">
           <label>DDD</label>
-          <input type="number" class="input" required placeholder="11" v-model="form.ddd">
+          <input type="number" class="input" required v-model="form.ddd">
         </div>
 
         <div class="sub-input-group">
           <label>Telefone</label>
-          <input
-            class="input"
-            type="number"
-            required
-            v-model="form.telefone"
-          >
+          <input class="input" type="number" required v-model="form.telefone">
         </div>
       </div>
 
@@ -69,7 +64,6 @@
 export default {
   name: "Form",
   data() {
-
     return {
       form: {
         ddd: "",
@@ -80,35 +74,31 @@ export default {
         isActive: ""
       }
     };
-
   },
   methods: {
     checkTable() {
       this.$router.push("/contatos");
     },
 
-    handleValidation(input){
+    handleValidation(input) {
       let ddd = input.ddd;
       let telefone = input.telephone;
       let erros = [];
 
-      if(ddd.length !== 2){
-        erros.push('DDD Invalido!');
+      if (ddd.length !== 2) {
+        erros.push("DDD Invalido!");
       }
 
-      if(telefone.length !== 9){
-        erros.push('Telefone Inválido');
+      if (telefone.length !== 9) {
+        erros.push("Telefone Inválido");
       }
       return erros;
     },
-
 
     handleRegister(e) {
       e.preventDefault();
 
       let storage = localStorage.getItem("WaitList");
-
-      console.log("storage linha 85", storage);
 
       let storageList = {
         id: Math.floor(Math.random() * 100),
@@ -120,11 +110,11 @@ export default {
         isActive: this.form.isActive
       };
 
-      //validation
+      // Validation
       const erros = this.handleValidation(storageList);
 
-      if(erros.length){
-        alert(erros.join('\n'));
+      if (erros.length) {
+        alert(erros.join("\n"));
       } else {
         if (storage) {
           storage = JSON.parse(storage);
@@ -148,7 +138,7 @@ export default {
   > .title {
     text-align: center;
     text-transform: uppercase;
-    font-size: 23px;
+    font-size: 32px;
 
     @media only screen and (min-width: 764px) {
       margin-top: 10px;
@@ -185,7 +175,6 @@ export default {
 
     @media only screen and (min-width: 764px) {
       display: grid;
-      grid-template-rows: repeat(4, 1fr);
       grid-template-columns: repeat(4, 1fr);
       grid-column-gap: 20px;
       margin-bottom: 20px;
@@ -213,6 +202,7 @@ export default {
       > .input {
         height: 66px;
         margin-top: 10px;
+        cursor: pointer;
       }
 
       input[type="radio"]:after {
@@ -270,14 +260,13 @@ export default {
 
     > .radio {
       flex-direction: row;
-        > .item {
-          margin: 0 15px;
-        }
+      > .item {
+        margin: 0 15px;
+      }
 
       @media only screen and (min-width: 764px) {
         display: flex;
         align-items: center;
-
       }
     }
     > .btn {

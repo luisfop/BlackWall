@@ -3,6 +3,7 @@
   
 This project called BlackWall, was created to store a waiting list of customers. The application has two pages, wich are for registration and the other is a table with the costumers.
 In the table it is possible to delete the users by clicking on the X.
+The framework used in this was VueJs with preprocessor Sass and VueRouter. To check other dependecies please go to package.json
 
 
 
@@ -29,8 +30,7 @@ Execute the command :
 
     yarn install
 
-
-To run the app execute the command line:
+To run the application execute the command line:
 
     npm run serve
     or
@@ -42,11 +42,8 @@ To run the app execute the command line:
 Open the browser and go to url:
  https://localhost:8080
 
-The land page is the registration form. To check the list of costumers that is waiting, please go to "ver tabela" button on the bottom of the page.
+The land page is the registration form. To check the list of costumers whom is waiting, please go to "ver tabela" button on the bottom of the page.
 
+# PS:
 
-
-
-# Obs:
-
-I chose not to use a form input validator library such as Vuelidate or Vuetify becuse I wanted to keep the code as much native Javascript as I could.
+I chose not to use a form input validator library such as Vuelidate or Vuetify becuse I wanted to keep the code as native Javascript as I could.
