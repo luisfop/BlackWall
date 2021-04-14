@@ -3,7 +3,8 @@
   
 This project called BlackWall, was created to store a waiting list of customers. The application has two pages, wich are for registration and the other is a table with the costumers.
 In the table it is possible to delete the users by clicking on the X.
-The framework used in this was VueJs with preprocessor Sass and VueRouter. To check other dependecies please go to package.json
+The framework used in this was VueJs with preprocessor Sass and VueRouter. To persist data I used localStorage.
+To check other dependecies please go to package.json
 
 
 
